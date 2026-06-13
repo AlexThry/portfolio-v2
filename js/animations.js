@@ -6,6 +6,7 @@
   var lenis = null;
   if (window.Lenis) {
     lenis = new Lenis({ lerp: 0.1 });
+    window.__lenis = lenis;
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
     gsap.ticker.lagSmoothing(0);
